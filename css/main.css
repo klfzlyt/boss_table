@@ -77,3 +77,20 @@ h3{
 	padding:0 10px;
 }
 
+
+/*page7*/
+.hbar{
+	height: 15px;
+	background-color: orange;
+}
+#column_table {
+	text-align: center;
+}
+#column_table thead tr th{
+	text-align: center;
+}
+#column_table thead th span{
+	border: 1px solid black;
+	word-spacing:4px;
+	letter-spacing:4px
+}

@@ -8,7 +8,7 @@
 		    }
 		});
 
-		require(['jquery','table','radar_custom_module','page6-analys'],function($,table,radar,page6_analys){
+		require(['jquery','table','radar_custom_module','page6-analys','column_table'],function($,table,radar,page6_analys,column_table){
 			
 			//random_the_data
 			var arry_level_1=[
@@ -150,5 +150,5 @@
 					container:"#chart-container"					
 				});
 				page6_analys();
-				
+				column_table({tableselector:"#column_table",classname:"hbar"})
 			});

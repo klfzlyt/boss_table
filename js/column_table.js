@@ -16,7 +16,7 @@ define(['d3', "jquery"], function(d3, $) {
 			tableselector: '#table',
 			data: data
 		}, setting);
-		var classname=param.classname;
+	
 		var data=param.data;
 		var tableselector=param.tableselector;
 		var classname=param.classname;
