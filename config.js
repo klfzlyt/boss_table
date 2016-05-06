@@ -8,8 +8,7 @@
 		    }
 		});
 
-		require(['jquery','table','radar_custom_module','page6-analys','column_table'],function($,table,radar,page6_analys,column_table){
-			
+		require(['jquery','table','radar_custom_module','page6-analys','column_table','util','totalcalcu'],function($,table,radar,page6_analys,column_table,util,totalcalcu){			
 			//random_the_data
 			var arry_level_1=[
 			"学习专注力",
@@ -81,74 +80,14 @@
 			}
 			
 			//end of ramndon data
-					var objectArray = [{
-			"Total": "34",
-			"Version": "1.0.4",
-			"Office": "New York",
-			"test": "1"
-		}, {
-			"Total": "34",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "√"
-		},
-		{
-			"Total": "35",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "f"
-		},
-		{
-			"Total": "35",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "f"
-		},
-		{
-			"Total": "35",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "f"
-		},
-		{
-			"Total": "36",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "f"
-		},
-			{
-			"Total": "37",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "f"
-		},
-		{
-			"Total": "38",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "√"
-		},
-		{
-			"Total": "38",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "√"
-		},
-		{
-			"Total": "38",
-			"Version": "1.1.0",
-			"Office": "Paris",
-			"test": "√"
-		}];
-				//console.log($);
-			////	console.log(table);
-				//$();
-				window.data=data;
-				var ob={color:"white",backgroundColor:"#D32F2F"}
-				table($('#table_container'),'table',data,"测评指标",ob);
+			
+		
+				table($('#table_container'),'table',data,"测评指标",{color:"white",backgroundColor:"#D32F2F"});			
+				var splitdata=page6_analys(data);				
+				column_table({tableselector:"#column_table",classname:"hbar",data:splitdata});
+				var totaldata=totalcalcu(util.converArraydataToPartdata(data));
 				radar({
-					container:"#chart-container"					
+					container:"#chart-container",
+					data:totaldata
 				});
-				page6_analys();
-				column_table({tableselector:"#column_table",classname:"hbar"})
 			});

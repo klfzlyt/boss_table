@@ -1,7 +1,17 @@
-
 define(['radar-chart',"jquery"],function(RadarChart,$){
   function Radar(setting){
   	//setting
+  		var arry=[
+			"学习专注力",
+			"记忆力",
+			"情感控制力",
+			"行为管理能力",
+			"思维力",
+			"社会适应能力",
+			"创造力",
+			"社交能力"		
+		];
+		
 		  	var data = [
 		  {
 		    className: 'argentina',
@@ -24,6 +34,13 @@ define(['radar-chart',"jquery"],function(RadarChart,$){
 			container:document,
 			data:data
 			}, setting);
+			//construct the data
+			
+			for(var i=0;i<param.data.length;i++){
+				data[0].axes[i].value=Math.round(param.data[i].score);
+			}
+			
+			
     var chart = RadarChart.chart();
   
 

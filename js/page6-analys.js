@@ -1,7 +1,7 @@
 define(['jquery'],function($){
 	//getthedata
 	
-	function page6_analys(){
+	function page6_analys(data){
 		
 		var hashmap={
 			"优秀":"excellent",
@@ -9,8 +9,7 @@ define(['jquery'],function($){
 			"正常":"Medium",
 			"基本":"base",
 			"调整":"develop"
-		}
-		
+		}		
 		function getlevel(ob){
 			for(var property in ob){
 				if(ob[property]==="√")return property;
@@ -19,8 +18,7 @@ define(['jquery'],function($){
 		//console.log(data);
 		//get the data
 		var iterate_data=data;
-		var ob={};
-		
+		var ob={};		
 		for(var i=0;i<iterate_data.length;i++){
 				var level=getlevel(iterate_data[i]);
 				if(!ob[level]){ob[level]=[]}
@@ -33,10 +31,7 @@ define(['jquery'],function($){
 				$(classname).append($("<span>"+ob[level][i]["测评组分"]+"</span>"));
 			}
 		}
-		
-		
+		return ob;
 	}
-	return page6_analys;
-	
-	
+	return page6_analys;		
 });
