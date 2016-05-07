@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/radar-chart.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
+ 
 	<?php 
 		require_once("../connect1.php");
 		require_once("../islogin.php");
@@ -22,6 +23,7 @@
 		$orgname = huoqu_orgname($CHD_ID);
 
 	?>
+ 
 	<body>
 		<!--        	
         	描述：page1
@@ -30,10 +32,12 @@
 			<header><img src=""/><img src=""/></header>
 			<div class="title">小学生综合素质测评报告</div>
 			<div class="information">
+ 
 				<p>姓       名：<?php echo $childname;?></p>
 				<p>性       别：<?php echo $sex;?></p>
 				<p>测评成绩：72.03</p>
 				<p>学       校：<?php echo $orgname;?></p>
+ 
 				<p>报告编号：6D4E3C217869000001</p>
 				<p>报告日期：2016年04月16日</p>
 			</div>
@@ -83,13 +87,17 @@
         -->
 		<div class="page4">
 			<h3>测评综合评价</h3>
+ 
 			<p><span><?php echo $childname;?></span>同学您好，根据本次测评的目的和要求，测评的指标包括：（1）学习专注力；（2）记忆力；（3）情感控制能力；（4）行为管理能力；（5）思维力；（6）社会适应能力；（7）创造力；（8）社交能力。该综合测评共有40余项测评要素。根据测评结果，您的测评达标成绩为<span>72.03</span>分，本报告向您提交该次测评的综合评价。</p>
+ 
 			<div class="chart">
 				<h3>一、您的测评成绩分布</h3>			
 				<div id="chart-container"></div>
 			</div>
 			<div class="analysis">
+ 
 				<p class="firstp"><span><?php echo $childname;?></span>，针对您在《小学生综合素质测评》结果分析，得出您的各维度测评 成绩达标值如下：</p> 
+ 
 				<p>（1）学习专注力测评成绩达标值为 <span>79.89</span>%，评级为 <span>优秀</span> ；</p> 
 				<p>（2）记忆力测评成绩达标值为 <span>62.69</span>%，评级为 <span>优秀</span>  ；</p> 
 				<p>（3）情感控制能力测评成绩达标值为 <span>64.63</span>% ，评级为 <span>优秀</span>； </p> 
