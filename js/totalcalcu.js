@@ -43,12 +43,11 @@ define(["util","jquery"],function(util,$){
 					i++;
 					sum+=parseInt(ob[property].score);
 			}					
-			return i===0?null:sum/i;
+			return i===0?null:(sum/i).toPrecision(4);
 		}
 	
 		total_calcu["average_calcu"]=function(partsdatas){
-			var obreturn={};
-			
+			var obreturn={};			
 			for(var i=0;i<arry.length;i++){
 				var arrypart=partsdatas[arry[i]];
 				var sum=0;
@@ -56,7 +55,7 @@ define(["util","jquery"],function(util,$){
 					for(var j=0;j<arrypart.length;j++){
 						sum+=parseInt(arrypart[j]["达标值"]);
 					}				
-					var score=sum/arrypart.length;
+					var score=(sum/arrypart.length).toPrecision(4);
 					var ob={};
 					ob.score=score;
 					ob.level=util.level_calc(score);
