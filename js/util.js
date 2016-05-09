@@ -35,7 +35,7 @@ define(function(){
 		    var currentdate = date.getFullYear() + seperator1 + month + seperator2 + strDate
 		            +seperator3;
 		    return currentdate;
-		}
+	}
 	var datamap_level1={
 		"study_attention":"学习专注力",
 		"memory":"记忆力",

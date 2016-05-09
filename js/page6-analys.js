@@ -29,7 +29,8 @@ define(['jquery'],function($){
 			var length=ob[level].length;
 			for(var i=0;i<length;i++){
 				$(classname).parent('p').last().show();
-				$(classname).append($("<span>"+ob[level][i]["测评组分"]+"</span>"));
+				if(ob[level][i]["测评组分"]==='行为表征') $(classname).append($("<span>"+ob[level][i]["测评组分"]+"("+ob[level][i]["测评指标"]+")</span>"));
+				else $(classname).append($("<span>"+ob[level][i]["测评组分"]+"</span>"));
 			}
 		}
 		console.log("ob: ",ob);
