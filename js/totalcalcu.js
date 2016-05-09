@@ -12,45 +12,56 @@ define(["util","jquery"],function(util,$){
 		];
 	
 		function total_calcu(partsdatas){			
-			var arry_ob=total_calcu["average_calcu"](partsdatas);
-			var total_score=total_calcu['average_sum_score_calcu'](arry_ob);
+			var ob=total_calcu["average_calcu"](partsdatas);
+			var total_score=total_calcu['average_sum_score_calcu'](ob);
 			$(".total_score").text(total_score);
 			for(var i=2;i<10;i++){
-				$('.page4 .analysis p:nth-of-type('+i+')'+" span:first-child").text(arry_ob[i-2].score);
-				$('.page4 .analysis p:nth-of-type('+i+')'+" span:last-child").text(arry_ob[i-2].level);				
+				$('.page4 .analysis p:nth-of-type('+i+')').hide()							
 			}
-			return arry_ob;
+			function findindex(arr,str){
+				for(var i=0;i<arr.length;i++){
+					if(arr[i]===str)return i+2;
+				}
+				return -1;
+			}
+			console.log(ob);
+			for(var property in ob){
+				var index=findindex(arry,property);
+				$('.page4 .analysis p:nth-of-type('+index+')').show();
+				$('.page4 .analysis p:nth-of-type('+index+')'+" span:first-child").text(ob[property].score);
+				$('.page4 .analysis p:nth-of-type('+index+')'+" span:last-child").text(ob[property].level);
+			}
+			//$('.page4 .analysis p:nth-of-type('+i+')'+" span:last-child").text(arry_ob[i-2].level);
+			return ob;
 		}
-		total_calcu['average_sum_score_calcu']=function(arry_ob){
-			var length=arry_ob.length;
+		total_calcu['average_sum_score_calcu']=function(ob){
 			var sum=0;
-			for(var i=0;i<length;i++){
-				sum+=parseInt(arry_ob[i].score);
-			}
-			return sum/length;
+			var i=0;
+			for(var property in ob){
+					i++;
+					sum+=parseInt(ob[property].score);
+			}					
+			return i===0?null:sum/i;
 		}
-		total_calcu["level_calcu"]=function(score){
-			if(score>=90&&score<=100)return "优秀";
-			if(score>=80&&score<90)return "良好";
-			if(score>=70&&score<80)return "正常";
-			return "一般";
-		}
+	
 		total_calcu["average_calcu"]=function(partsdatas){
-			var arry_ob=[];
+			var obreturn={};
+			
 			for(var i=0;i<arry.length;i++){
 				var arrypart=partsdatas[arry[i]];
 				var sum=0;
-				for(var j=0;j<arrypart.length;j++){
-					sum+=parseInt(arrypart[j]["达标值"]);
-				}				
-				var score=sum/arrypart.length;
-				var ob={};
-				ob.score=score;
-				ob.level=total_calcu["level_calcu"](score);
-				arry_ob.push(ob);
+				if(arrypart){					
+					for(var j=0;j<arrypart.length;j++){
+						sum+=parseInt(arrypart[j]["达标值"]);
+					}				
+					var score=sum/arrypart.length;
+					var ob={};
+					ob.score=score;
+					ob.level=util.level_calc(score);
+					obreturn[arry[i]]=ob;
+				}
 			}
-			return arry_ob;
-		}
-		
+			return obreturn;
+		}		
 		return total_calcu;		
 })
