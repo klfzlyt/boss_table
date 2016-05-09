@@ -10,15 +10,24 @@ define(["util","jquery"],function(util,$){
 			"创造力",
 			"社交能力"		
 		];
-		
-		
+	
 		function total_calcu(partsdatas){			
 			var arry_ob=total_calcu["average_calcu"](partsdatas);
+			var total_score=total_calcu['average_sum_score_calcu'](arry_ob);
+			$(".total_score").text(total_score);
 			for(var i=2;i<10;i++){
 				$('.page4 .analysis p:nth-of-type('+i+')'+" span:first-child").text(arry_ob[i-2].score);
 				$('.page4 .analysis p:nth-of-type('+i+')'+" span:last-child").text(arry_ob[i-2].level);				
 			}
 			return arry_ob;
+		}
+		total_calcu['average_sum_score_calcu']=function(arry_ob){
+			var length=arry_ob.length;
+			var sum=0;
+			for(var i=0;i<length;i++){
+				sum+=parseInt(arry_ob[i].score);
+			}
+			return sum/length;
 		}
 		total_calcu["level_calcu"]=function(score){
 			if(score>=90&&score<=100)return "优秀";

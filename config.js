@@ -90,4 +90,5 @@
 					container:"#chart-container",
 					data:totaldata
 				});
+				$('.date').text(util.getNowFormatDate());
 			});
