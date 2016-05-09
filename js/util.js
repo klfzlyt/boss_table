@@ -140,8 +140,8 @@ define(function(){
 		return arry_return;
 	}
 
-	util.converJsondataToPartData=function(jsonstr){
-		jsonstr=jsonstr||'{"study_attention":{"study_motive":"null","behavior":"12"},"memory":{"behavior":"null"},"emotion_control":{"behavior":"89"},"behavior_manage":{"behavior_yizhi":"null","behavior_biaozheng":"null"},"thinking":{"jihua":"null","jiankong":"null","zuzhi":"null","qidong":"null"},"Social_adaptability":{"behavior":"null"},"cteativity":{"behavior":"123"},"social_ability":{"self_control":"null","cooperation":"null","opinion":"null","responsibility":"null","companion":"null"}}';		
+	util.converJsondataToPartData=function(jsonstr){		
+		jsonstr=jsonstr||'{"study_attention":{"study_motive":"66","behavior":"12"},"memory":{"behavior":"null"},"emotion_control":{"behavior":"89"},"behavior_manage":{"behavior_yizhi":"null","behavior_biaozheng":"null"},"thinking":{"jihua":"null","jiankong":"null","zuzhi":"null","qidong":"null"},"Social_adaptability":{"behavior":"null"},"cteativity":{"behavior":"123"},"social_ability":{"self_control":"null","cooperation":"null","opinion":"null","responsibility":"null","companion":"null"}}';		
 		var job=JSON.parse(jsonstr);
 		var partdata={};	
 		for(var level1str in job){			
@@ -156,9 +156,7 @@ define(function(){
 				ob["基本"]="";
 				ob["正常"]="";
 				ob["良好"]="";
-				ob["优秀"]="";
-			
-					
+				ob["优秀"]="";								
 				if(score!=='null'){
 					ob[util.level_calc(score)]="√";
 					partdata[datamap_level1[level1str]].push(ob);

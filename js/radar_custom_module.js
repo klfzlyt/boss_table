@@ -51,10 +51,10 @@ define(['radar-chart',"jquery"],function(RadarChart,$){
     var chart = RadarChart.chart();
   
 
-RadarChart.defaultConfig.radius = param.radius;
-RadarChart.defaultConfig.w = param.width;
-RadarChart.defaultConfig.h = param.height;
-RadarChart.draw(param.container, data);
+		RadarChart.defaultConfig.radius = param.radius;
+		RadarChart.defaultConfig.w = param.width;
+		RadarChart.defaultConfig.h = param.height;
+		RadarChart.draw(param.container, data);
 }
   return Radar;
   });

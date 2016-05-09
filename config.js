@@ -106,4 +106,5 @@
 				});
 				//日期
 				$('.date').text(util.getNowFormatDate());
+				$('.data_length').text(data.length);
 			});

@@ -78,7 +78,9 @@ h3{
 .excellent span,.good span,.Medium span,.base span,.develop span{
 	padding:0 10px;
 }
-
+.hidep{
+	display: none;
+}
 
 /*page7*/
 .hbar{

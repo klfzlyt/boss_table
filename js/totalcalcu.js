@@ -15,6 +15,7 @@ define(["util","jquery"],function(util,$){
 			var ob=total_calcu["average_calcu"](partsdatas);
 			var total_score=total_calcu['average_sum_score_calcu'](ob);
 			$(".total_score").text(total_score);
+			$items=$('.item').hide();
 			for(var i=2;i<10;i++){
 				$('.page4 .analysis p:nth-of-type('+i+')').hide()							
 			}
@@ -27,6 +28,7 @@ define(["util","jquery"],function(util,$){
 			console.log(ob);
 			for(var property in ob){
 				var index=findindex(arry,property);
+				$($items.get(index-2)).show();
 				$('.page4 .analysis p:nth-of-type('+index+')').show();
 				$('.page4 .analysis p:nth-of-type('+index+')'+" span:first-child").text(ob[property].score);
 				$('.page4 .analysis p:nth-of-type('+index+')'+" span:last-child").text(ob[property].level);

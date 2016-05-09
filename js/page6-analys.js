@@ -28,9 +28,11 @@ define(['jquery'],function($){
 			var classname="."+hashmap[level];
 			var length=ob[level].length;
 			for(var i=0;i<length;i++){
+				$(classname).parent('p').last().show();
 				$(classname).append($("<span>"+ob[level][i]["测评组分"]+"</span>"));
 			}
 		}
+		console.log("ob: ",ob);
 		return ob;
 	}
 	return page6_analys;		
