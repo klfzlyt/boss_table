@@ -7,7 +7,7 @@ define('table', ["jquery", "j2t"], function($, ConvertJsonToTable) {
 		var $table = $('#' + tableid);
 		
 		//style
-		$table.addClass("table").addClass('table-bordered').addClass('table-striped').css({
+		$table.addClass("table").addClass('table-bordered').addClass('table-striped').addClass('table-condensed').css({
 				'text-align': "center"				
 			});			
 		

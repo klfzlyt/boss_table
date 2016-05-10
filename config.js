@@ -83,7 +83,7 @@
 				
 				//
 				
-				data=util.converJsondataToexpectedData();
+				//data=util.converJsondataToexpectedData();
 				
 				
 				//
@@ -102,7 +102,9 @@
 				//雷达图
 				radar({
 					container:"#chart-container",
-					data:totaldata
+					data:totaldata,
+					width:350,
+					height:400
 				});
 				//日期
 				$('.date').text(util.getNowFormatDate());

@@ -15,11 +15,27 @@ html,body{
 h3{
 	font-weight: bold;
 	text-align: left;
+	 margin: 0 !important;
 }
-
+.page1,.page2,.page3,.page4,.page5,.page6,.page7{
+	text-align: center;
+	width: 100%;	
+	 
+	margin: 0 auto;
+	
+}
+.page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p{
+	text-indent:50px;
+	text-align: left;
+	line-height: 2;
+}
+.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th{
+	padding: 4px;
+}
 /*page1*/
 .page1{
 	text-align: center;
+	height: 100%;
 }
 .page1 .title{
 		font-size: 50px;	
@@ -42,25 +58,23 @@ h3{
 }
  
  /*page2*/
-.page2,.page3,.page4,.page5,.page6,.page7{
-	text-align: center;
-	width: 80%;	
-	margin: 0 auto;
-	
-}
-.page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p{
-	text-indent:50px;
-	text-align: left;
-	line-height: 2;
+
+.page2{
+	height: 100%;
 }
  
  
  /*page3*/
-
+.page3{
+	height: 100%;
+}
 
 
 /*page4*/
-
+.page4{
+	 height: 100%;
+	 
+}
 .page4 .analysis p:not(.firstp){
 	text-indent: inherit;
 }
@@ -69,6 +83,12 @@ h3{
  	
  }
  /*page5*/
+.page5{
+	height: 100%;
+}
+.page5 tr{
+	  
+}
 .page5 table th{	
 	text-align: center;
 	color:#fff !important;
@@ -79,6 +99,9 @@ h3{
 }
 
 /*page6*/
+.page6{
+	height: 100%;
+}
 .excellent span,.good span,.Medium span,.base span,.develop span{
 	padding:0 10px;
 }
