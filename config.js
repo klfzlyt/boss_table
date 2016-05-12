@@ -80,10 +80,13 @@
 			}			
 			//end of ramndon data
 				
-				
+				var url='http://www.21thkids.com/up/chaxunnew.php?CHD_ID=';
+				//console.log($(".childid").dataset.childid);
+				url+=$(".childid").data('childid');
 				//
-				
-				//data=util.converJsondataToexpectedData();
+				strdata=$.ajax({url:url,async:false}).responseText;
+				//console.log(strdata);
+				data=util.converJsondataToexpectedData(strdata);
 				
 				
 				//
@@ -103,8 +106,8 @@
 				radar({
 					container:"#chart-container",
 					data:totaldata,
-					width:350,
-					height:400
+					width:250,
+					height:300
 				});
 				//日期
 				$('.date').text(util.getNowFormatDate());
