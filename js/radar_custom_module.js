@@ -40,10 +40,21 @@ define(['radar-chart',"jquery"],function(RadarChart,$){
 //			for(var i=0;i<param.data.length;i++){
 //				data[0].axes[i].value=Math.round(param.data[i].score);
 //			}
+			var i=0;
 			for(var property in oridata){
-				var ob={
-					axis:property,
-					value:oridata[property].score
+				i++;
+				if(i===1){
+					var ob={
+						axis:property,
+						value:oridata[property].score,
+						yOffset:-1
+					}
+				}
+				else{
+						var ob={
+						axis:property,
+						value:oridata[property].score						 
+					}
 				}
 				data[0].axes.push(ob);
 			}
