@@ -103,8 +103,8 @@
 				radar({
 					container:"#chart-container",
 					data:totaldata,
-					width:350,
-					height:400
+					width:250,
+					height:300
 				});
 				//日期
 				$('.date').text(util.getNowFormatDate());
