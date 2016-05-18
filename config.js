@@ -86,7 +86,7 @@
 				//
 				strdata=$.ajax({url:url,async:false}).responseText;
 				//console.log(strdata);
-				data=util.converJsondataToexpectedData(strdata);
+				//data=util.converJsondataToexpectedData(strdata);
 				
 				
 				//

@@ -5,7 +5,7 @@ define(['d3'],function(d3){var RadarChart = {
     h: 600,
     factor: 0.95,
     factorLegend: 1,
-    levels: 3,
+    levels: 5,
     levelTick: false,
     TickLength: 10,
     maxValue: 100,
