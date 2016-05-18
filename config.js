@@ -77,17 +77,40 @@
 				level_1_num[iterate]--
 				if(level_1_num[iterate]===0)iterate++;
 				data.push(ob);
-			}
-			
+			}			
 			//end of ramndon data
-			
-		
-				table($('#table_container'),'table',data,"测评指标",{color:"white",backgroundColor:"#D32F2F"});			
+				
+				var url='http://www.21thkids.com/up/chaxunnew.php?CHD_ID=';
+				//console.log($(".childid").dataset.childid);
+				url+=$(".childid").data('childid');
+				//
+				strdata=$.ajax({url:url,async:false}).responseText;
+				//console.log(strdata);
+				data=util.converJsondataToexpectedData(strdata);
+				
+				
+				//
+				//表格		
+				table($('#table_container'),'table',data,"测评指标",{color:"white",backgroundColor:"#D32F2F"});
+				//优势分析
 				var splitdata=page6_analys(data);				
 				column_table({tableselector:"#column_table",classname:"hbar",data:splitdata});
+				//汇总数据计算
+				var jsonstr='{"study_attention":{"study_motive":"134","behavior":"null"},"memory":{"behavior":"null"},"emotion_control":{"behavior":"null"},"behavior_manage":{"behavior_yizhi":"null","behavior_biaozheng":"null"},"thinking":{"jihua":"null","jiankong":"null","zuzhi":"null","qidong":"null"},"Social_adaptability":{"behavior":"null"},"cteativity":{"behavior":"123"},"social_ability":{"self_control":"null","cooperation":"null","opinion":"null","responsibility":"null","companion":"null"}}';
+				var job=JSON.parse(jsonstr);
+				console.log("originalnal ",job);				
+				console.log("partdata: ",util.converArraydataToPartdata(data));
+				console.log("originaldata: ",data);
 				var totaldata=totalcalcu(util.converArraydataToPartdata(data));
+				//雷达图
 				radar({
 					container:"#chart-container",
-					data:totaldata
+					data:totaldata,
+					width:500,
+					height:330 
 				});
+				$('svg').attr("height",parseInt($('svg').attr("height"))+10);
+				//日期
+				$('.date').text(util.getNowFormatDate());
+				$('.data_length').text(data.length);
 			});

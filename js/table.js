@@ -7,14 +7,9 @@ define('table', ["jquery", "j2t"], function($, ConvertJsonToTable) {
 		var $table = $('#' + tableid);
 		
 		//style
-		$table.addClass("table").addClass('table-bordered').addClass('table-striped').css({
+		$table.addClass("table").addClass('table-bordered').addClass('table-striped').addClass('table-condensed').css({
 				'text-align': "center"				
-			})
-			.find('th').css({
-				"text-align": "center",
-				"color":"#fff",
-				"background-color":"#D32F2F"
-			});
+			});			
 		
 		var merged_num=1;
 		var _all_heads=$table.find("thead tr th");

@@ -6,22 +6,19 @@
 		<title></title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/radar-chart.min.css" />
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/main1.css" />
 	</head>
  
-	<?php 
-		require_once("../connect1.php");
-		require_once("../islogin.php");
-		require_once("../chaxun_childinfo.php");
+	
+    <?php 
+		require_once("./connect1.php");		
+		require_once("./chaxun_childinfo.php");
 		db::getInstance();
 		error_reporting(E_ALL ^E_WARNING ^E_NOTICE); 
-		$CHD_ID = $_POST['CHD_ID'];
-
-
+		$CHD_ID = $_GET['CHD_ID'];
 		$childname = huoqu_childname($CHD_ID);
 		$sex = huoqu_sex($CHD_ID);
 		$orgname = huoqu_orgname($CHD_ID);
-
 	?>
  
 	<body>
@@ -29,19 +26,17 @@
         	描述：page1
         -->
 		<div class="page1">
-			<header><img src=""/><img src=""/></header>
-			<div class="title">小学生综合素质测评报告</div>
-			<div class="information">
-
- 
-				<p>姓       名：<?php echo $childname;?></p>
-				<p>性       别：<?php echo $sex;?></p>
-				<p>测评成绩：<span class="total_score">72.03</span></p>
-				<p>学       校：<?php echo $orgname;?></p>
- 
-
-				<p>报告编号：6D4E3C217869000001</p>
-				<p>报告日期：<span class="date">2016年04月16日</span></p>
+			<div class="containerpage1">
+				<header><img src=""/><img src=""/></header>
+				<div class="title">小学生综合素质测评报告</div>
+				<div class="information">
+					<p>姓       名：<?php echo $childname;?></p>
+					<p>性       别：<?php echo $sex;?></p>
+					<p>测评成绩：<span class="total_score">72.03</span></p>
+					<p>学       校：<?php echo $orgname;?></p> 
+					<p>报告编号：6D4E3C217869000001</p>
+					<p>报告日期：<span class="date">2016年04月16日</span></p>
+				</div>
 			</div>
 			<div class="institution">
 				<p>国际儿童青少年素质测评中心</p>
@@ -164,7 +159,11 @@
 				<tbody></tbody>
 			</table>
 		</div>
-		
+		 
+			
+		<input type="hidden" class="childid" data-childid='<?php echo $CHD_ID ?>'/>
+	
+	 
 		
 		
 		

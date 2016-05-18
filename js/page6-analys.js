@@ -28,9 +28,12 @@ define(['jquery'],function($){
 			var classname="."+hashmap[level];
 			var length=ob[level].length;
 			for(var i=0;i<length;i++){
-				$(classname).append($("<span>"+ob[level][i]["测评组分"]+"</span>"));
+				$(classname).parent('p').last().show();
+				if(ob[level][i]["测评组分"]==='行为表征') $(classname).append($("<span>"+ob[level][i]["测评组分"]+"("+ob[level][i]["测评指标"]+")</span>"));
+				else $(classname).append($("<span>"+ob[level][i]["测评组分"]+"</span>"));
 			}
 		}
+		console.log("ob: ",ob);
 		return ob;
 	}
 	return page6_analys;		

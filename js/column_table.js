@@ -27,13 +27,16 @@ define(['d3', "jquery"], function(d3, $) {
 		var aryy_str=["优秀","良好","正常","基本","调整"];
 		for(var i in aryy_str){
 			var property=aryy_str[i];
-			for(var i=0;i<data[property].length;i++){				
-				if(property!=="优秀" && item_number>=2)break;
-				item_number++;
-				var tempob={};
-				tempob.item=data[property][i]["测评组分"];
-				tempob.value=data[property][i]["达标值"];
-				switchdata.push(tempob);					
+			if(data[property]){
+				for(var i=0; i <data[property].length;i++){				
+					if(property!=="优秀" && item_number>=2)break;
+					item_number++;
+					var tempob={};
+					if(data[property][i]["测评组分"]==="行为表征")tempob.item=data[property][i]["测评组分"]+"("+data[property][i]["测评指标"]+")";
+					else tempob.item=data[property][i]["测评组分"];
+					tempob.value=data[property][i]["达标值"];
+					switchdata.push(tempob);					
+				}
 			}
 		}
 		
