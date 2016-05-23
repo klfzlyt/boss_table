@@ -170,6 +170,8 @@ define(function(){
 				var ob={};
 				if(job[level1str][level2str]==="null" || job[level1str][level2str]===null)continue;
 				var score=Math.round(job[level1str][level2str]*100);
+				if(score>100)score=100;
+				if(score<0)score=0;
 				ob["测评指标"]=datamap_level1[level1str];
 				ob["测评组分"]=datamap_level2[level2str];		
 				ob["达标值"]=score;													
