@@ -48,6 +48,7 @@ define(function(){
 		"social_ability":"社交能力"		
 	};
 	var datamap_level2={
+				"attention":"注意力",
 				"study_motive":"学习动机",
 	  			"behavior":"行为表征",
 	  			"space_search":"空间搜索",
@@ -61,8 +62,10 @@ define(function(){
 	  			"jihua":"计划能力",
 	  			"jiankong":"监控能力",
 	  			"zuzhi":"组织能力",
+	  			"hannuota":"计划能力",
 	  			"qidong":"启动能力",
 	  			"tuili":"推理能力",
+	  			"liangbiao":"表征",
 	  			"micro_expression_recognition":"微表情识别"	,
 	  			"emotional_recognition":"情绪识别",	  		 
 	  			"writing_fluency":"文字流畅性",
@@ -72,11 +75,20 @@ define(function(){
 	  			"opinion":"主张性",
 	  			"responsibility":"责任感",
 	  			"companion":"同伴能力",
+	  			"heartflower":"反映转换灵活性",
 	  			"emotional_cognition":"情绪认知",
-	  			"empathy_ability":"共情能力"	 	  
+	  			"empathy_ability":"共情能力",
+	  			"heartflower":"反映转换灵活性",			
+	  			"flanker":"感知转换灵活性",
+	  			"stroop":"抑制能力",
+	 			"card_sort":"任务规则转换灵活性",
+	 			"gonogo":"抑制能力"
+	  			
+	  			
 	}
 	/*
 	 * study_attention:学习专注力
+	 * 			attention:注意力
 	 * 			study_motive:学习动机
 	 * 			behavior:行为表征
 	 * 			space_search:空间搜索
@@ -103,6 +115,8 @@ define(function(){
 	 * 			zuzhi:组织能力
 	 * 			qidong:启动能力
 	 * 			tuili:推理能力
+	 * 			hannuota:计划能力
+	 * 			liangbiao:表征
 	 * 
 	 *Social_adaptability:社会适应能力
 	 * 			micro_expression_recognition:微表情识别	
@@ -110,7 +124,11 @@ define(function(){
 	 * 			behavior:行为表征
 	 * 
 	 *cteativity: 创造力
+	 * 			heartflower:反映转换灵活性
 	 * 			behavior:行为表征
+	 * 			flanker:感知转换灵活性
+	 * 			stroop:抑制能力
+	 * 			card_sort:任务规则转换灵活性
 	 * 			writing_fluency:文字流畅性
 	 * 			cognitive_flexibility:认知灵活性
 	 * 
@@ -120,6 +138,7 @@ define(function(){
 	 * 			opinion:主张性
 	 * 			responsibility:责任感
 	 * 			companion:同伴能力
+	 * 			gonogo:抑制能力
 	 * 			emotional_cognition:情绪认知
 	 * 			empathy_ability:共情能力
 	 */
@@ -149,16 +168,17 @@ define(function(){
 			for(var level2str in job[level1str]){
 				if(!partdata[datamap_level1[level1str]])partdata[datamap_level1[level1str]]=[];
 				var ob={};
-				var score=job[level1str][level2str];
+				if(job[level1str][level2str]==="null" || job[level1str][level2str]===null)continue;
+				var score=Math.round(job[level1str][level2str]*100);
 				ob["测评指标"]=datamap_level1[level1str];
 				ob["测评组分"]=datamap_level2[level2str];		
-				ob["达标值"]=score;														
+				ob["达标值"]=score;													
 				ob["调整"]="";
 				ob["基本"]="";
 				ob["正常"]="";
 				ob["良好"]="";
 				ob["优秀"]="";								
-				if(score!=='null'){
+				if(score!=='null' && score!==null){
 					ob[util.level_calc(score)]="√";
 					partdata[datamap_level1[level1str]].push(ob);
 				}

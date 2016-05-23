@@ -86,7 +86,7 @@
 				//
 				strdata=$.ajax({url:url,async:false}).responseText;
 				//console.log(strdata);
-				//data=util.converJsondataToexpectedData(strdata);
+				data=util.converJsondataToexpectedData(strdata);
 				
 				
 				//
@@ -113,4 +113,6 @@
 				//日期
 				$('.date').text(util.getNowFormatDate());
 				$('.data_length').text(data.length);
+				var report_number="6D4E3C2178"+Math.round(Math.random()*10000);
+				$(".report_number").text(report_number);
 			});
