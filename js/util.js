@@ -159,7 +159,9 @@ define(function(){
 		}
 		return arry_return;
 	}
-
+	util.isNumber=function(obj){
+		 return typeof obj === 'number' && !isNaN(obj)  
+	}
 	util.converJsondataToPartData=function(jsonstr){		
 		jsonstr=jsonstr||'{"study_attention":{"study_motive":"66","behavior":"12"},"memory":{"behavior":"null"},"emotion_control":{"behavior":"89"},"behavior_manage":{"behavior_yizhi":"null","behavior_biaozheng":"null"},"thinking":{"jihua":"null","jiankong":"null","zuzhi":"null","qidong":"null"},"Social_adaptability":{"behavior":"null"},"cteativity":{"behavior":"123"},"social_ability":{"self_control":"null","cooperation":"null","opinion":"null","responsibility":"null","companion":"null"}}';		
 		var job=JSON.parse(jsonstr);
@@ -170,6 +172,9 @@ define(function(){
 				var ob={};
 				if(job[level1str][level2str]==="null" || job[level1str][level2str]===null)continue;
 				var score=Math.round(job[level1str][level2str]*100);
+				if(!util.isNumber(score)){
+					return;
+				}
 				if(score>100)score=100;
 				if(score<0)score=0;
 				ob["测评指标"]=datamap_level1[level1str];
