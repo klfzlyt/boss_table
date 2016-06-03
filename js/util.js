@@ -173,7 +173,7 @@ define(function(){
 				if(job[level1str][level2str]==="null" || job[level1str][level2str]===null)continue;
 				var score=Math.round(job[level1str][level2str]*100);
 				if(!util.isNumber(score)){
-					return;
+					continue;
 				}
 				if(score>100)score=100;
 				if(score<0)score=0;
