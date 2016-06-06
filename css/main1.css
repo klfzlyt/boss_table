@@ -120,7 +120,15 @@ p,div{
 	display: none;
 	text-align: left;
 }
-
+.page6_analysis table{
+	 
+	
+}
+.page6_analysis table td{
+	width: 25% !important;
+	
+	
+}
 /*page7*/
 .hbar{
 	height: 15px;
