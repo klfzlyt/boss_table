@@ -3,10 +3,10 @@ define(function(){
 		
 	}
 	util.level_calc=function(score){
-			if(score>=90&&score<=100)return "优秀";
-			if(score>=80&&score<90)return "良好";
-			if(score>=70&&score<80)return "正常";
-			if(score<70&&score>=60)return "基本";
+			if(score>=80)return "优秀";
+			if(score>=61&&score<=79)return "良好";
+			if(score>=45&&score<=60)return "正常";
+			if(score<=44&&score>=36)return "基本";
 			return "调整";
 	}
 	util.converArraydataToPartdata=function(datas){
