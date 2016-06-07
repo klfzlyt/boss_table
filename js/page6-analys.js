@@ -42,10 +42,7 @@ define(['jquery'],function($){
 				}
 			}
 			for (var i = 0; i < rownumber*4-length; i++) {
-				$(classname+" table tbody tr:nth-of-type("+row+")").append($("<td></td>"));
-
-
-				
+				$(classname+" table tbody tr:nth-of-type("+row+")").append($("<td></td>"));				
 			}
 		}
 		//console.log("ob: ",ob);

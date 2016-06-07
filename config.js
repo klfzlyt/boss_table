@@ -110,7 +110,7 @@
 					container:"#chart-container",
 					data:totaldata,
 					width:500,
-					height:330 
+					height:300 
 				});
 				$('svg').attr("height",parseInt($('svg').attr("height"))+10);
 				//日期

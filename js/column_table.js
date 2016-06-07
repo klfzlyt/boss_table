@@ -58,6 +58,12 @@ define(['d3', "jquery"], function(d3, $) {
 			tb.selectAll("tr td:nth-child(3)").data(data).text(function(data){return data.value});				 
 		}
 		render(data,tableselector);		
+		function background_bar(){
+			$(tableselector+" tbody div.hbar").parent('td').addClass("relative hpadding").append($('<div class="hbar_background"></div>'));
+
+		}
+		background_bar();	
+
 	}
 	return column_table;
 });
