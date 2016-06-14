@@ -18,16 +18,15 @@ h3{
 	text-align: left;
 	 margin: 0 !important;
 	 font-family: "Microsoft Yahei";
+	 font-size: 20px;
 }
 p,div{
 	font-family: "Microsoft Yahei";
 }
 .page1,.page2,.page3,.page4,.page5,.page6,.page7{
 	text-align: center;
-	width: 100%;	
-	 
-	margin: 0 auto;
-	
+	width: 95%;		 
+	margin: 0 auto;	
 }
 .page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p{
 	text-indent:50px;
