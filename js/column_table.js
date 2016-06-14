@@ -14,7 +14,7 @@ define(['d3', "jquery"], function(d3, $) {
 		//分析优势					
 		//
 		var param = $.extend({
-			classname:"hbar",
+			classname:"hbar_wrap",
 			tableselector: '#table',
 			data: data
 		}, setting);
@@ -47,20 +47,20 @@ define(['d3', "jquery"], function(d3, $) {
 			// Enter
 			var tr = d3.select(tableselector+" tbody").selectAll('tr').data(data).enter().append("tr");
 			tr.append("td");
-			tr.append("td").append("div").attr("class", classname); 
+			var wrap=tr.append("td").append("div").attr("class", classname);
+			wrap.append("div").attr("class","hbar");
 			tr.append("td");
 			// Update
 			var tb=d3.select(tableselector+" tbody");
 			tb.selectAll("tr td:nth-child(1)").data(data).text(function(data){return data.item});				 
-			tb.selectAll("tr td:nth-child(2) div").data(data).style("width", function(data) {
+			tb.selectAll("tr td:nth-child(2) div.hbar").data(data).style("width", function(data) {
 					return data.value + "%";
 			});				
 			tb.selectAll("tr td:nth-child(3)").data(data).text(function(data){return data.value});				 
 		}
 		render(data,tableselector);		
 		function background_bar(){
-			$(tableselector+" tbody div.hbar").parent('td').addClass("relative hpadding").append($('<div class="hbar_background"></div>'));
-
+			$(tableselector+" tbody div.hbar_wrap").append($('<div class="hbar_background"></div>'));
 		}
 		background_bar();	
 

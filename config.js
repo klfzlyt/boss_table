@@ -97,7 +97,7 @@
 				table($('#table_container'),'table',data,"测评指标",{color:"white",backgroundColor:"#D32F2F"});
 				//优势分析
 				var splitdata=page6_analys(data);				
-				column_table({tableselector:"#column_table",classname:"hbar",data:splitdata});
+				column_table({tableselector:"#column_table",classname:"hbar_wrap",data:splitdata});
 				//汇总数据计算
 				var jsonstr='{"study_attention":{"study_motive":"134","behavior":"null"},"memory":{"behavior":"null"},"emotion_control":{"behavior":"null"},"behavior_manage":{"behavior_yizhi":"null","behavior_biaozheng":"null"},"thinking":{"jihua":"null","jiankong":"null","zuzhi":"null","qidong":"null"},"Social_adaptability":{"behavior":"null"},"cteativity":{"behavior":"123"},"social_ability":{"self_control":"null","cooperation":"null","opinion":"null","responsibility":"null","companion":"null"}}';
 				var job=JSON.parse(jsonstr);
@@ -118,4 +118,28 @@
 				$('.data_length').text(data.length);
 				var report_number="6D4E3C2178"+Math.round(Math.random()*10000);
 				$(".report_number").text(report_number);
+				
+				var wid=$(".information").width();			
+				$(".information>div div").each(function(){
+					var span_wid;
+					$(this).siblings("span").each(function(){
+						//span_wid=$(this).width();	
+						
+						
+					});
+					//$(this).css("width",wid-span_wid+"px");
+					
+				});
+				console.log(wid);
+					html2pdf = {
+				 header: {
+				  height: "1cm",
+				  contents: '<div class="center">page {{pageNumber}} of {{totalPages}}</div>'
+				 },
+				 footer: {
+				  height: "1cm",
+				  contents: '<div class="center">-第 {{pageNumber}} 页/ 共 {{totalPages}} 页-</div>'
+				  }
+				};
+				
 			});
