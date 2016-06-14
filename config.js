@@ -86,6 +86,7 @@
 				var url='http://www.21thkids.com/up/chaxunnew.php?CHD_ID=';
 				//console.log($(".childid").dataset.childid);
 				url+=$(".childid").data('childid');
+				var strdata;
 				//
 				strdata=$.ajax({url:url,async:false}).responseText;
 				//console.log(strdata);
@@ -109,8 +110,8 @@
 				radar({
 					container:"#chart-container",
 					data:totaldata,
-					width:500,
-					height:300 
+					width:350,
+					height:200 
 				});
 				$('svg').attr("height",parseInt($('svg').attr("height"))+10);
 				//日期
@@ -131,15 +132,6 @@
 					
 				});
 				console.log(wid);
-					html2pdf = {
-				 header: {
-				  height: "1cm",
-				  contents: '<div class="center">page {{pageNumber}} of {{totalPages}}</div>'
-				 },
-				 footer: {
-				  height: "1cm",
-				  contents: '<div class="center">-第 {{pageNumber}} 页/ 共 {{totalPages}} 页-</div>'
-				  }
-				};
+		
 				
 			});

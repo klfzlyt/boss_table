@@ -178,6 +178,7 @@ define(function(){
 				}
 				if(score>100)score=100;
 				if(score<0)score=0;
+				if(score===0)score=1;
 				ob["测评指标"]=datamap_level1[level1str];
 				ob["测评组分"]=datamap_level2[level2str];		
 				ob["达标值"]=score;													
