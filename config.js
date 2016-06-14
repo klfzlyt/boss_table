@@ -59,6 +59,9 @@
 			var level_1_num=[
 				4,3,3,3,5,3,3,7
 			];
+			function isNumber(obj) {  
+			    return typeof obj === 'number' && isFinite(obj)      
+			}  
 			var iterate=0;
 			var data=[]
 			for (var i=0;i<arry_level_2.length;i++) {
@@ -107,7 +110,7 @@
 					container:"#chart-container",
 					data:totaldata,
 					width:500,
-					height:330 
+					height:300 
 				});
 				$('svg').attr("height",parseInt($('svg').attr("height"))+10);
 				//日期

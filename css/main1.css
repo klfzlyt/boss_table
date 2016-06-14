@@ -6,19 +6,27 @@ html,body{
 	padding: 0;
 	font-size: 11px;
 }
-
-
+p{
+	margin: 10px 0 10px !important;
+}
+.relative{
+	position: relative;
+}
 .fullpage{
 	width: 100%;
 	height: 100%;
 }
-
+h4{
+	text-align: left;
+	font-family: "Microsoft Yahei";
+	font-weight:bold;
+}
 h3{
 	font-weight: bold;
 	text-align: left;
 	 margin: 0 !important;
 	 font-family: "Microsoft Yahei";
-	 font-size: 20px;
+	 font-size: 20px !important;
 }
 p,div{
 	font-family: "Microsoft Yahei";
@@ -44,7 +52,7 @@ p,div{
 	position: relative;
 }
 .page1 .title{
-		font-size: 45px;	
+		font-size: 37px;	
 		margin-top: 8%;
 		font-weight: bold;
 		
@@ -117,12 +125,32 @@ p,div{
 }
 .hidep{
 	display: none;
+	text-align: left;
 }
-
+.page6_analysis table{
+	 
+	
+}
+.page6_analysis table td{
+	width: 25% !important;
+	
+	
+}
 /*page7*/
 .hbar{
 	height: 15px;
 	background-color: #EC971F !important;
+	z-index: 10;
+	position: absolute;
+}
+.hbar_background{
+width:100%;
+height:15px;
+background-color: black !important;
+position: absolute;
+}
+.hpadding{
+	padding: 8px 0 !important;
 }
 #column_table {
 	text-align: center;
@@ -135,8 +163,12 @@ p,div{
 	word-spacing:4px;
 	letter-spacing:4px
 }
-
-
+#column_table thead th:nth-of-type(1){
+	width: 20%;
+}
+#column_table thead th:nth-of-type(3){
+	width: 20%;
+}
 /*hidden*/
 .childid{
 	display: none;
