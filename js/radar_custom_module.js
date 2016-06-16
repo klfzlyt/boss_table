@@ -47,7 +47,7 @@ define(['radar-chart',"jquery"],function(RadarChart,$){
 					var ob={
 						axis:property,
 						value:oridata[property].score,
-						yOffset:-1
+						yOffset:-2
 					}
 				}
 				else{

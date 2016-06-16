@@ -8,7 +8,7 @@ html,body{
 	letter-spacing: 1px;
 }
 
-
+i{font-style:normal}
 p{
 	margin: 10px 0 10px !important;
 }
@@ -18,22 +18,23 @@ p{
 .fullpage{
 	width: 100%;
 	height: 100%;
+	position: relative;
 }
 h3,h4,h5{
 	text-align: left;
 	font-family: "Microsoft Yahei";
- 	 margin-top: 0px;
+	margin-top: 0px;
 }
-h3{
-	 margin-top: 10px !important;
+h3{	
 	text-align: center !important;
-	 font-size: 20px !important;
+	font-size: 20px !important;
 }
 h4{
-	margin-top: 10px !important;
+	
 }
 h5{
-	
+	margin-top: 0px !important;
+	padding-top: 20px !important;
 	text-align: center !important;
 }
 table{
@@ -43,18 +44,29 @@ table{
 p,div{
 	font-family: "Microsoft Yahei";
 }
-.page1,.page2,.page3,.page4,.page5,.page6,.page7,.page8,.page9,.page10,.page11,.page12{
+.page1,.page2,.page3,.page4,.page5,.page6,.page7,.page8,.page9,.page10,.page11,.page12,.page13{
 	text-align: center;
 	width: 70%;		 
 	margin: 0 auto;	
 	height: 100% !important;
 	display: block !important;
+	 
 }
-.page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p,.page8 p,.page9 p,.page10 p,.page11 p,.page12 p{
+.page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p,.page8 p,.page9 p,.page10 p,.page11 p,.page12 p,.page13 p{
 	text-indent:25px;
 	text-align: left;
 	line-height: 2;
 }
+.page2>h3,.page3>h3,.page4>h3,.page5>h3,.page6>h3,.page7>h3,.page8>h3,.page9>h3,.page10>h3,.page11>h3,.page12>h3{
+ 	 padding-top:70px; 	 
+}
+.page2>h4,.page3>h4,.page4>h4,.page5>h4,.page6>h4,.page7>h4,.page8>h4,.page9>h4,.page10>h4,.page11>h4,.page12>h4{
+ 	 padding-top:70px; 	 
+}
+.page8 p,.page9 p,.page10 p,.page11 p,.page12 p{
+	margin: 0 !important;
+}
+
 .table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th{
 	padding: 1px !important;
 }
@@ -67,8 +79,10 @@ p,div{
 }
 .headpage{
 	width: 80%;
-	border-bottom: 1px solid black;
-	margin: 0px auto;
+	border-bottom: 1px solid black;	
+	position: absolute;
+	left: 10%;
+	top: 30px;
 }
 .imghead{
 	width: 20px;
@@ -82,9 +96,7 @@ p,div{
 	background-size: 100% 100% !important;
 	height: 100%;
 	width: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0;
+	position: relative;
 }
 .page1{
 	text-align: center;
@@ -119,7 +131,7 @@ p,div{
 	 width:50%;
 	 text-align: center;
 	 text-align: -moz-left;	
-	 margin:30% 25% 0 25%;	 	
+	 margin:30% 23%;	 	
 }
 .page1 .information>div{
 	margin:10px 0;	
@@ -143,6 +155,7 @@ p,div{
 }
 .biginfo{
 	font-size: 20px;
+	margin-top: 50% !important;
 }
 .page1 .information span{
 
@@ -169,7 +182,7 @@ p,div{
 	margin-top: 0px;
 }
 .page2 h3{
-	margin-top:40px !important;
+	 
 }
  .page2_wrap{
  }
@@ -181,21 +194,21 @@ p,div{
 	height: 100%;
 }
 .page3 h3{
-	margin-top:-5px !important;
+	 
 }
 
 /*page4*/
 .page4{
 	display: none;
-		letter-spacing:1px;
-	 height: 100%;
+	letter-spacing:1px;
+	height: 100%;
 	 
 }
 .chart h4{
 	margin-bottom: 15px !important;
 }
 .page4 .analysis p:not(.firstp){
-	 
+	 text-indent: 0px !important;
 }
  
 .page4 .analysis p:nth-of-type(2){
@@ -210,11 +223,11 @@ p,div{
 		letter-spacing:1px;
 	height: 100%;
 }
-.page5 tr{
-	  
+.page5 thead tr{
+	  height:33px
 }
 .page5 h4{
-	margin-top: -10px !important;
+	 
 }
 .page5 p{
 	 
@@ -231,19 +244,20 @@ p,div{
 /*page6*/
 .page6{
 	display: none;
-		letter-spacing:1px;
+	letter-spacing:1px;
 	height: 100%;
 }
 .excellent span,.good span,.Medium span,.base span,.develop span{
 	padding:0 10px;
 }
 .hidep div:first-child{
-	margin: 5px 0;
+	margin: 10px 0 5px 0;
 	text-indent: 25px;
 }
 .hidep{
 	display: none;
 	text-align: left;
+	line-height: 2;
 }
 .page6_analysis table{
 	 
@@ -264,7 +278,7 @@ p,div{
 		letter-spacing:1px;
 }
 .page7 h4{
-	margin-top: -10px !important;
+	 
 }
 .hbar_wrap{
 	height: 10px;
@@ -341,7 +355,7 @@ position: absolute;
 /*page12*/
 .page12{
 	margin-top: 0px;
-	height: initial !important;
+ 
 	display: none;
 }
 .page12 h3{
@@ -353,4 +367,23 @@ position: absolute;
 .date1{
 	float: right;
 	text-align: right !important;
+}
+/*page13*/
+.page13{
+	
+}
+.page13full{
+	background: url(../img/beimian.jpg) no-repeat 0 0 !important;
+	background-size: 100% 100% !important;
+}
+.endimg{
+	position: absolute;
+	width: 130px;
+	top: 250px;
+	left:235px
+}
+.endinfo{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
 }

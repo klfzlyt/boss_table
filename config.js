@@ -1,4 +1,5 @@
 		require.config({
+			 waitSeconds: 0,
 			baseUrl: 'js',
 		    paths: {
 		        jquery : 'jquery-1.11.0',
@@ -88,9 +89,9 @@
 				url+=$(".childid").data('childid');
 				var strdata;
 				//
-			//	strdata=$.ajax({url:url,async:false}).responseText;
+				strdata=$.ajax({url:url,async:false}).responseText;
 				//console.log(strdata);
-				//data=util.converJsondataToexpectedData(strdata);
+				data=util.converJsondataToexpectedData(strdata);
 				
 				
 				//
@@ -111,7 +112,7 @@
 					container:"#chart-container",
 					data:totaldata,
 					width:350,
-					height:200 
+					height:210 
 				});
 				$('svg').attr("height",parseInt($('svg').attr("height"))+10);
 				//日期
@@ -120,18 +121,9 @@
 				var report_number="6D4E3C2178"+Math.round(Math.random()*10000);
 				$(".report_number").text(report_number);
 				
-				var wid=$(".information").width();			
-				$(".information>div div").each(function(){
-					var span_wid;
-					$(this).siblings("span").each(function(){
-						//span_wid=$(this).width();	
-						
-						
-					});
-					//$(this).css("width",wid-span_wid+"px");
-					
-				});
-				console.log(wid);
+				for(var i=2;i<=11;i++){
+					$('<div class="center headpage">国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告</div>').addClass("header").appendTo($(".page"+i));
+				}
 		
 				
 			});
