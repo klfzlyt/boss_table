@@ -57,6 +57,12 @@ p,div{
 	padding: 1px !important;
 }
 
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td{
+	    border: 1px solid #828282 !important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+	vertical-align: middle;
+}
 .headpage{
 	width: 80%;
 	border-bottom: 1px solid black;
@@ -189,7 +195,7 @@ p,div{
 .page5 table th{	
 	text-align: center;
 	color:#fff !important;
-	background-color:#D32F2F !important;
+	background-color:#5aa0dc !important;
 }
 .table-striped tbody tr:nth-of-type(odd){
 	background-color: #f2dede !important;
@@ -206,7 +212,7 @@ p,div{
 }
 .hidep div:first-child{
 	margin: 5px 0;
-	text-indent: 40px;
+	text-indent: 25px;
 }
 .hidep{
 	display: none;
@@ -215,6 +221,9 @@ p,div{
 .page6_analysis table{
 	 
 	
+}
+.page6 table{
+	text-align: center !important;
 }
 .page6_analysis table td{
 	width: 25% !important;

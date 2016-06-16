@@ -36,7 +36,7 @@ define(['jquery'],function($){
 			$(classname).parent('div.hidep').last().show();
 			for(var i=0;i<length;i++){
 				var row=Math.floor(i/AROWNUMBER)+1;			
-				if(ob[level][i]["测评组分"]==='行为表征'){$(classname+" table tbody tr:nth-of-type("+row+")").append($("<td>"+ob[level][i]["测评组分"]+"("+ob[level][i]["测评指标"]+")</td>"));}// 
+				if(ob[level][i]["测评组分"]==='行为表征'){$(classname+" table tbody tr:nth-of-type("+row+")").append($("<td>"+ob[level][i]["测评组分"]+"<br/>("+ob[level][i]["测评指标"]+")</td>"));}// 
 				else{
 					$(classname+" table tbody tr:nth-of-type("+row+")").append($("<td>"+ob[level][i]["测评组分"]+"</td>"));
 				}
