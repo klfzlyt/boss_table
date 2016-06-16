@@ -58,10 +58,10 @@ p,div{
 	line-height: 2;
 }
 .page2>h3,.page3>h3,.page4>h3,.page5>h3,.page6>h3,.page7>h3,.page8>h3,.page9>h3,.page10>h3,.page11>h3,.page12>h3{
- 	 padding-top:70px; 	 
+ 	 padding-top:75px; 	 
 }
 .page2>h4,.page3>h4,.page4>h4,.page5>h4,.page6>h4,.page7>h4,.page8>h4,.page9>h4,.page10>h4,.page11>h4,.page12>h4{
- 	 padding-top:70px; 	 
+ 	 padding-top:75px; 	 
 }
 .page8 p,.page9 p,.page10 p,.page11 p,.page12 p{
 	margin: 0 !important;
@@ -82,7 +82,7 @@ p,div{
 	border-bottom: 1px solid black;	
 	position: absolute;
 	left: 10%;
-	top: 30px;
+	top: 35px;
 }
 .imghead{
 	width: 20px;
