@@ -102,9 +102,6 @@
 				//汇总数据计算
 				var jsonstr='{"study_attention":{"study_motive":"134","behavior":"null"},"memory":{"behavior":"null"},"emotion_control":{"behavior":"null"},"behavior_manage":{"behavior_yizhi":"null","behavior_biaozheng":"null"},"thinking":{"jihua":"null","jiankong":"null","zuzhi":"null","qidong":"null"},"Social_adaptability":{"behavior":"null"},"cteativity":{"behavior":"123"},"social_ability":{"self_control":"null","cooperation":"null","opinion":"null","responsibility":"null","companion":"null"}}';
 				var job=JSON.parse(jsonstr);
-				console.log("originalnal ",job);				
-				console.log("partdata: ",util.converArraydataToPartdata(data));
-				console.log("originaldata: ",data);
 				var totaldata=totalcalcu(util.converArraydataToPartdata(data));
 				//雷达图
 				radar({
@@ -119,19 +116,6 @@
 				$('.data_length').text(data.length);
 				var report_number="6D4E3C2178"+Math.round(Math.random()*10000);
 				$(".report_number").text(report_number);
-				
-				var wid=$(".information").width();			
-				$(".information>div div").each(function(){
-					var span_wid;
-					$(this).siblings("span").each(function(){
-						//span_wid=$(this).width();	
-						
-						
-					});
-					//$(this).css("width",wid-span_wid+"px");
-					
-				});
-				console.log(wid);
 		
 				
 			});
