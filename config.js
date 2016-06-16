@@ -88,9 +88,9 @@
 				url+=$(".childid").data('childid');
 				var strdata;
 				//
-				strdata=$.ajax({url:url,async:false}).responseText;
+			//	strdata=$.ajax({url:url,async:false}).responseText;
 				//console.log(strdata);
-				data=util.converJsondataToexpectedData(strdata);
+				//data=util.converJsondataToexpectedData(strdata);
 				
 				
 				//
