@@ -68,7 +68,7 @@ p,div{
 .headpage{
 	width: 80%;
 	border-bottom: 1px solid black;
-	margin: 20px auto;
+	margin: 0px auto;
 }
 .imghead{
 	width: 20px;
@@ -108,6 +108,12 @@ p,div{
 .center{
 	text-align: center;
 	font-size: 10px;
+}
+.center_bottom{
+	text-align: center;
+	font-size: 7px;
+	margin-top: -3px;
+ 
 }
 .page1 .information{
 	 width:50%;
