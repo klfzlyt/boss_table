@@ -109,11 +109,11 @@ p,div{
 .page1 .chd_id{
 	position: absolute;
 	right: -50px;
-	top: 0;
+	top: 10px;
 }
 .page1 .title{
 		font-size: 33px;	
-		padding-top:30%;
+		padding-top:35%;
 	 
 		
 }
@@ -155,7 +155,7 @@ p,div{
 }
 .biginfo{
 	font-size: 20px;
-	margin-top: 50% !important;
+	margin-top: 45% !important;
 }
 .page1 .information span{
 

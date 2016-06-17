@@ -15,6 +15,7 @@ define(["util","jquery"],function(util,$){
 			var ob=total_calcu["average_calcu"](partsdatas);
 			var total_score=total_calcu['average_sum_score_calcu'](ob);
 			$(".total_score").text(total_score);
+			$(".level").text(util.level_calc(total_score));
 			$items=$('.item').hide();
 			for(var i=2;i<10;i++){
 				$('.page4 .analysis p:nth-of-type('+i+')').hide()							
