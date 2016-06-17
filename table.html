@@ -22,28 +22,35 @@
 	?>
  
 	<body>
-		 
-		<div class="page1">
-			<div class="containerpage1">
-				<header><img src=""/><img src=""/></header>
-				<div class="title">小学生综合素质测评报告</div>
-				<div class="information biginfo">
-					<div><span>测评成绩：</span><div class="total_score noborder">72.03</div></div>
+		<!--        	
+        	描述：page1
+        -->
+        <div class="fullpage_page1 fullpage">				
+			<div class="page1">
+					<div class="chd_id">ID&nbsp;:&nbsp;<?php echo $CHD_ID;?></div>
+					<div class="containerpage1">
+						<header><img src=""/><img src=""/></header>
+						<div class="title">学生综合素质测评报告</div>
+						<div class="information biginfo">
+							<div><span>测评成绩：</span><div class="total_score noborder">72.03</div></div>
+						</div>
+						<div class="information">
+							<div><span>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</span><div><?php echo $childname;?></div></div>
+							<div><span>性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</span><div><?php echo $sex;?></div></div>				
+							<div><span>学&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp校：</span><div><?php echo $orgname;?></div></div> 
+							<div><span>报告编号：</span><div class="report_number">6D4E3C217869000001</div></div>
+							<div><span>报告日期：</span><div class="date">2016年04月16日</div></div>
+						</div>
+					</div>
+					<div class="institution">
+						<p>国际儿童青少年素质测评中心</p>			
+					</div>
 				</div>
-				<div class="information">
-					<div><span>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</span><div><?php echo $childname;?></div></div>
-					<div><span>性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</span><div><?php echo $sex;?></div></div>				
-					<div><span>学&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp校：</span><div><?php echo $orgname;?></div></div> 
-					<div><span>报告编号：</span><div class="report_number">6D4E3C217869000001</div></div>
-					<div><span>报告日期：</span><div class="date">2016年04月16日</div></div>
-				</div>
-			</div>
-			<div class="institution">
-				<p>国际儿童青少年素质测评中心</p>
-				<p>重庆市学生生涯规划指导专业委员会</p>
-				<p>重庆市教育评估研究会学生素质测评工作委员会</p>
-			</div>
-		</div> 
+		</div>
+		<!--
+        	描述：page2
+        -->
+         <div class="fullpage">		
 		<div class="page2">
 			 
 				<h3>测评项目简介</h3>
@@ -65,12 +72,25 @@
 				  
 				 </p>
 		 
-		</div>	
+		</div>
+		 </div>
+		
+		
+		<!--        	
+        	描述：page3
+        -->
+        <div class="fullpage">
 		<div class="page3">
 			<h3>报告申明</h3>
-			<p>本测评报告由国际儿童青少年素质测评中心发布，针对你参与的《小学生综合素质测评》提交的具有科学性、权威性的测评报告。该测评报告具有专有性和唯一性，任何针对本报告的修改、转发、拷贝和打印等行为，都将视为对该测评报告的侵权行为。</p>
+			<p>本测评报告由国际儿童青少年素质测评中心发布，针对你参与的《学生综合素质测评》提交的具有科学性、权威性的测评报告。该测评报告具有专有性和唯一性，任何针对本报告的修改、转发、拷贝和打印等行为，都将视为对该测评报告的侵权行为。</p>
 			<p>该报告的保密义务由你个人承担，请务必保存好你的测评账号、密码和测评报告。</p>								
-		</div>	
+		</div>
+		</div>
+		
+		<!--        	
+        	描述：page4
+        -->
+          <div class="fullpage">
 		<div class="page4">
 			<h3>测评综合评价</h3>
 			<p>同学您好，根据本次测评的目的和要求，测评的指标包括：
@@ -83,43 +103,49 @@
 				<span class="item">创造力,</span>
 				<span class="item">社交能力,</span>
 				该综合测评共有<span class="data_length">40</span>余项测评要素。根据测评结果，您的测评达标成绩为<span class="total_score">72.03</span>分，本报告向您提交该次测评的综合评价。</p>
- 
 			<div class="chart">
 				<h4>一、您的测评成绩分布</h4>			
 				<div id="chart-container"></div>
 			</div>
 			<div class="analysis">
-				<p class="firstp"><span>您好</span>，针对您在《小学生综合素质测评》结果分析，得出您的各维度测评 成绩达标值如下：</p> 
-				<p>学习专注力测评成绩达标值为 <span>79.89</span>%，评级为 <span>优秀</span> ；</p> 
-				<p>记忆力测评成绩达标值为 <span>62.69</span>%，评级为 <span>优秀</span>  ；</p> 
-				<p>情感控制能力测评成绩达标值为 <span>64.63</span>% ，评级为 <span>优秀</span>； </p> 
-				<p>行为管理能力测评成绩达标值为 <span>71.45</span>% ，评级为 <span>优秀</span>； </p> 
-				<p>思维力测评成绩达标值为 <span>80.41</span>% ，评级为 <span>优秀</span>； </p> 
-				<p>社会适应能力测评成绩达标值为 <span>80.00</span>%，评级为 <span>优秀 </span> ； </p> 
-				<p>创造力测评成绩达标值为 <span>79.00</span>%，评级为 <span>优秀 </span> ； </p> 
-				<p>社交能力测评成绩达标值为 <span>59.47</span>%，评级为 <span>优秀</span>  。</p> 
-
-
+				<p class="firstp"><span>您好</span>，针对您在《学生综合素质测评》结果分析，得出您的各维度测评成绩达标值如下：</p> 
+				<p><i>● </i>学习专注力测评成绩达标值为 <span>79.89</span>%，评级为: <span>优秀</span> ；</p> 
+				<p><i>● </i>记忆力测评成绩达标值为 <span>62.69</span>%，评级为: <span>优秀</span>  ；</p> 
+				<p><i>● </i>情感控制能力测评成绩达标值为 <span>64.63</span>% ，评级为: <span>优秀</span>； </p> 
+				<p><i>● </i>行为管理能力测评成绩达标值为 <span>71.45</span>% ，评级为: <span>优秀</span>； </p> 
+				<p><i>● </i>思维力测评成绩达标值为 <span>80.41</span>% ，评级为: <span>优秀</span>； </p> 
+				<p><i>● </i>社会适应能力测评成绩达标值为 <span>80.00</span>%，评级为: <span>优秀 </span> ； </p> 
+				<p><i>● </i>创造力测评成绩达标值为 <span>79.00</span>%，评级为: <span>优秀 </span> ； </p> 
+				<p><i>● </i>社交能力测评成绩达标值为 <span>59.47</span>%，评级为: <span>优秀</span>  。</p> 
 			</div>
 		</div>
+		</div>		 
+
+	  <div class="fullpage">
 		<div class="page5">
-			<h3>二、各测评指标成绩达标值分析</h3>		
-			<p>根据您参与的《小学生综合素质测评》结果，经过针对各测评要素的期望指标常模对比分析，得出各要素成绩占测评期望指标值的百分比成绩，具体测评成绩达标值成绩分析如下：</p>
+			<h4>二、各测评指标成绩达标值分析</h4>		
+			<p>根据您参与的《学生综合素质测评》结果，经过针对各测评要素的期望指标常模对比分析，得出各要素成绩占测评期望指标值的百分比成绩，具体测评成绩达标值成绩分析如下：</p>
 			<div id="table_container"></div>			
 		</div>
+		</div>
+
+ 	<div class="fullpage">
 		<div class="page6">
-			<h3>三、各测评指标成绩分析</h3>
+			<h4>三、各测评指标成绩分析</h4>
 			<div class="page6_analysis">
-				<p>根据测评常模的各个要素实测成绩空间达标值分析，您所参测的各个要素的测评达标值的成绩空间分布如下。 </p>
+				<p style="margin-bottom: 0 !important;">根据测评常模的各个要素实测成绩空间达标值分析，您所参测的各个要素的测评达标值的成绩空间分布如下。 </p>
 				<div class="hidep"><div>达到了测评期望指标常模<span>优秀值空间</span>的要素为：</div><div class="excellent"><table  class="table table-hover table-bordered"><tbody></tbody></table></div></div>
 				<div class="hidep"><div>达到了测评期望指标常模<span>良好值空间</span>的要素为：</div><div class="good"><table  class="table table-hover table-bordered"><tbody></tbody></table></div></div>
 				<div class="hidep"><div>达到了测评期望指标常模<span>正常值空间</span>的要素为：</div><div class="Medium"><table  class="table table-hover table-bordered"> <tbody></tbody></table></div></div>
 				<div class="hidep"><div>达到了测评期望指标常模<span>基本值空间</span>的要素为：</div><div class="base"><table  class="table table-hover table-bordered"><tbody></tbody></table></div></div>
 				<div class="hidep"><div>处于测评期望指标常模<span>发展调整空间</span>的要素为：</div><div class="develop"><table  class="table table-hover table-bordered"><tbody></tbody></table></div></div>
 			</div>
-		</div>	
+		</div>
+		</div>
+		
+		 <div class="fullpage">
 		<div class="page7">
-			<h3>四、您的优势分析</h3>
+			<h4>四、您的优势分析</h4>
 			<p>根据您的测评成绩综合分析，您在以下方面具备了良好的发展优势，希望您继续保持自己的优势，在以后的学习发展过程中继续努力学习，进一步提高自己的综合素质与学习方法与能力。</p>
 			<table id="column_table" class="table table-bordered">
 				<thead>
@@ -134,62 +160,72 @@
 				<tbody></tbody>
 			</table>
 		</div>
+		</div>
+		 <div class="fullpage">
 		<div class="page8">
-			 <h3>五、各指标介绍</h3>
+			 <h4>五、各指标介绍</h4>
 			<div>
-				<h5>·学习专注力</h5>
+				<h5>学习专注力</h5>
 				<p>学习专注力是指一个人的注意力高度集中指向于学习的能力，它直接关系到一个儿童某节课的学习是否能够取得成功。然而，很多儿童的注意力不能持久集中，专注力涣散，上课的时候经常走神，从而直接影响其学习效果及学习效率。因此越来越多的家长和老师关注儿童的学习专注力。</p>
 				<p> 一般情况下，学习专注力高的儿童无论做什么事，都能排除外界干扰，全身心投入其中。除了学习成绩比较好，其他方面也表现不错。但家长要注意引导孩子，不能使其误入歧途，如沉迷于玩电子游戏等，应将其较好的专注力运用到最能促使他发展的方面，例如运用到书本学习以外的地方，读课外书，科技小发明，小制作等方面。</p>
 				<p>学习专注力低的儿童做事总是心猿意马，三心二意，上课容易分心开小差，作业粗心大意，成绩也不怎么理想，而且越到高年级，专注力在学业成绩上的影响越大。但家长也不必气馁，专注力可以在日常生活和学习中培养的，同时，培养孩子的专注力不是一朝一夕之事。家长需要以持续的耐心引导并积极地帮助他们培养良好的专注力。</p>									
 			</div>
 			<div>
-				<h5>·记忆力</h5>
+				<h5>记忆力</h5>
 				<p>记忆是人脑对客观事物的识记、保持、回忆或再认的过程。而记忆力是指能记住事物的外形和名称，以及该事物与以前学过的某物的相似点与不同之处的能力。它是影响人们学习活动的重要因素，是学习活动的基础和必要条件。很多研究表明，儿童的记忆力对其学业成绩有很大的影响。</p>
 				<p>人的记忆力有强弱之分，记忆力强的人往往过目成诵、长久不忘。记忆力差的人往往昏头昏脑，事后即忘。人的记忆力好坏虽与先天因素有关，但通过后天培养也可以进一步提高。加强记忆力的训练，改进记忆方法，可以提高记忆效果。</p>
 			</div>					
-		</div>				 
+		</div>
+		</div>
+		 <div class="fullpage">
 		<div class="page9">			
 			<div>
-				<h5>·情感控制力</h5>
+				<h5 style="padding-top: 75px !important;">情感控制力</h5>
 				<p>情感控制指个体能恰当地根据情感反应调控行为，即个体控制自己的情绪活动以及抑制情绪冲动的能力。情感的调控能力是建立在对情绪状态的自我觉知的基础上的，是指一个人如何有效地摆脱焦虑、沮丧、激动、愤怒或烦恼等消极情绪的能力。</p>
 				<p>一般具有良好情感控制能力的儿童能够表现出较好的社交能力和社会技能，在课堂上表现很积极，能得到老师更多的鼓励和关注，学业成绩较好，同伴接受程度较高；反之，情感控制能力不好的儿童人际交往能力欠佳，且表现出更多的外在问题，如挑衅行为、多动和好战行为等。</p>												
 			</div>
 			<div>
-				<h5>·行为管理能力</h5>
+				<h5>行为管理能力</h5>
 				<p>行为管理能力是指个人能够灵活的转变自己的认知，对自己的行为以及情绪进行合理的抑制控制的能力。一般包括行为控制、认知转换、情感控制三种成分。</p>
 				<p>一般行为管理能力较高的儿童各方面表现优秀，善于听取别人的意见，勇于改正自己的错误，能合理的调节自己的情绪，与同学相处融洽，是老师或家长眼中的好孩子。</p>
 				<p>一般行为管理能力较弱的儿童比较调皮，上课坐不住，爱发脾气，经常与同学闹矛盾，比较固执，一般他认准的观念，即使知道是错的也很难改变。</p>
 			</div>
 			<div>
-				<h5>·思维力</h5>
+				<h5>思维力</h5>
 				<p>思维力，是指人类对客观事物的本质和规律的间接地、概括地反映能力。在思维过程中所表现出来的思维能力，它是智力活动的基础。一般思维水平的高低，反映一个人的智力活动水平高低。</p>
 				<p>思维力强的儿童，对问题能提出创造性见解，别人没想到的，他能够想到；当在学习或生活中遇到困难时能独立思考，寻找答案；能从不同角度整体地看待事物。</p>
 				<p>思维力弱的儿童一般反应较慢，墨守成规，不善变通，总是片面看待问题。</p>
 			</div>
 		</div>
+		</div>
+		 <div class="fullpage">
 		<div class="page10">			
 			<div>
-				<h5>·社会适应能力</h5>
+				<h5 style="padding-top: 75px !important;">社会适应能力</h5>
 				<p>社会适应能力指儿童对其所生存的自然环境和社会环境的适应能力，具体表现为儿童在社会适应过程中的独立生活能力、交往能力、学习能力、自我管理以及参加集体活动的能力。社会适应能力与儿童的语言与沟通能力、智力有很大的关系。</p>
 				<p>一般社会适应能力强的儿童，能很快地适应新的学习、生活环境，与人交往轻松大方，给人的印象较好，无论进入什么样的环境，都能应付自如，左右逢源。</p>
 				<p>社会适应能力较弱的儿童，在各种新环境中，即使经过一段时间的努力，也不一定能够适应，常常因与周围事物格格不入而十分苦恼。在与他人的交往中，总是显得拘谨，羞怯，手足无措。</p>
 			</div>
 			<div>
-				<h5>·创造力</h5>
+				<h5>创造力</h5>
 				<p>创造力，是人类特有的一种综合性本领。一个人是否具有创造力，是一流人才和三流人才的分水岭。它是知识、智力、能力及优良的个性品质等因素综合优化构成的。创造力是指产生新思想，发现和创造新事物的能力。它是成功地完成某种创造性活动所必需的心理品质。</p>
 				<p>创造力高的儿童思维具有变通性，能举一反三，能够在较短的时间内表达出较多的观点；对事物具有不寻常的独特见解；他们一般兴趣广泛，语言流畅，具有幽默感，反应敏捷，记忆力较好，学习效率高，独立，有较强的自信心，社交能力强。</p>
 				<p>创造力低的儿童一般缺乏想象力，不敢挑战有难度的任务，不爱冒险，因循守旧，不会或者不愿意表达自己的观点，爱随大流。</p>
 			</div>
 		
 		</div>	
+		</div>
+		 <div class="fullpage">
 		<div class="page11">
 			<div>
-				<h5>·社交能力</h5>
+				<h5 style="padding-top: 75px !important;">社交能力</h5>
 				<p>社会交往能力是指个人与个人之间、个人与团体之间以及团体与团体之间，为了满足某种需求或达到某种目的，进行交互活动的能力。这种能力包含社交认知能力、社交沟通能力和社交控制能力三大基本要素，是人们在社会生存和发展中必备的能力。</p>
 				<p>社交能力较好的儿童一般外向开朗，敢于表达自己的观点，能较好的适应新环境，而且很快交上朋友，他们一般在同伴中比较受欢迎。</p>
 				<p>社交能力较差的儿童表现为胆小内向，特别不爱说话，语言表达能力差，不与别人交往，更不愿意在公众场合表达自己观点，后期会发展成自卑的心理特征。</p>
 			</div>
 		</div>
+		</div>
+		 <div class="fullpage">
 		<div class="page12">
 			<h3>致家长的一封信</h3>
 			<h5>尊敬的各位家长： </h5>
@@ -201,23 +237,35 @@
 				<span class="date">2016年4月18日</span>
 			</p>
 		</div>
+		</div>
+		 <div class="fullpage page13full">
+		 	<img src="img/qrcode.png" class="endimg">
+		 	<div class="endinfo">
+		 		<p>地址：中国重庆市渝北区加州路38号（招生考试大院内）</p>
+		 		<p>电话：023-62602200&nbsp&nbsp62602211&nbsp&nbsp传真：023-62602244 Aad：401147</p>
+		 		<p>邮箱：wpt@163.com</p>
+		 	</div>
+			<div class="page13">
+				
+			</div>
+		</div>
 		<input type="hidden" class="childid" data-childid='<?php echo $CHD_ID ?>'/>
 	
 	 
 		
 		
 		<script>
-						//江苏弘智信息科技有限公司                              小学生综合素质测评报告
-				html2pdf = {
-				 header: {
-				  height: "1cm",
-				  contents: '<div class="center headpage"><div class="imghead"></div>江苏弘智信息科技有限公司&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp小学生综合素质测评报告</div>'
-				  },
-				 footer: {
-				  height: "1cm",
-				  contents: '<div class="center">-第 {{pageNumber}} 页/ 共 {{totalPages}} 页-</div>'
-				  }
-				};
+						//国际儿童青少年素质测评中心                              学生综合素质测评报告
+//				html2pdf = {
+//				 header: {
+//				  height: "1cm",
+//				  contents: '<div class="center headpage"><div class="imghead"></div>国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告</div>'
+//				  },
+//				 footer: {
+//				  height: "0mm",
+//				  contents: '<div class="center_bottom">-第 {{pageNumber}} 页/ 共 {{totalPages}} 页-</div>'
+//				  }
+//				};
 		</script>
 		<script type="text/javascript" data-main ="config"   src="js/require.js" ></script>
 	</body>

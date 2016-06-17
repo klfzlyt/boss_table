@@ -30,8 +30,8 @@ define(["util","jquery"],function(util,$){
 				var index=findindex(arry,property);
 				$($items.get(index-2)).show();
 				$('.page4 .analysis p:nth-of-type('+index+')').show();
-				$('.page4 .analysis p:nth-of-type('+index+')'+" span:first-child").text(ob[property].score);
-				$('.page4 .analysis p:nth-of-type('+index+')'+" span:last-child").text(ob[property].level);
+				$('.page4 .analysis p:nth-of-type('+index+')'+" span:nth-of-type(1)").text(ob[property].score);
+				$('.page4 .analysis p:nth-of-type('+index+')'+" span:nth-of-type(2)").text(ob[property].level);
 			}
 			//$('.page4 .analysis p:nth-of-type('+i+')'+" span:last-child").text(arry_ob[i-2].level);
 			return ob;

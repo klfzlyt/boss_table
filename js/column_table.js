@@ -32,7 +32,7 @@ define(['d3', "jquery"], function(d3, $) {
 					if(property!=="优秀" && item_number>=2)break;
 					item_number++;
 					var tempob={};
-					if(data[property][i]["测评组分"]==="行为表征")tempob.item=data[property][i]["测评组分"]+"("+data[property][i]["测评指标"]+")";
+					if(data[property][i]["测评组分"]==="行为表征")tempob.item=data[property][i]["测评组分"]+"<br/>("+data[property][i]["测评指标"]+")";
 					else tempob.item=data[property][i]["测评组分"];
 					tempob.value=data[property][i]["达标值"];
 					switchdata.push(tempob);					
@@ -52,7 +52,7 @@ define(['d3', "jquery"], function(d3, $) {
 			tr.append("td");
 			// Update
 			var tb=d3.select(tableselector+" tbody");
-			tb.selectAll("tr td:nth-child(1)").data(data).text(function(data){return data.item});				 
+			tb.selectAll("tr td:nth-child(1)").data(data).html(function(data){return data.item});				 
 			tb.selectAll("tr td:nth-child(2) div.hbar").data(data).style("width", function(data) {
 					return data.value + "%";
 			});				

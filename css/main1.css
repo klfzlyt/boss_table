@@ -8,7 +8,7 @@ html,body{
 	letter-spacing: 1px;
 }
 
-
+i{font-style:normal}
 p{
 	margin: 10px 0 10px !important;
 }
@@ -18,45 +18,71 @@ p{
 .fullpage{
 	width: 100%;
 	height: 100%;
+	position: relative;
 }
-h4{
+h3,h4,h5{
 	text-align: left;
 	font-family: "Microsoft Yahei";
-	font-weight:bold;
+	margin-top: 0px;
+}
+h3{	
+	text-align: center !important;
+	font-size: 20px !important;
+}
+h4{
+	
+}
+h5{
+	margin-top: 0px !important;
+	padding-top: 20px !important;
+	text-align: center !important;
 }
 table{
 	margin-bottom: 0 !important;
 }
-h3{
-	font-weight: bold;
-	text-align: left;
-	 margin: 0 !important;
-	 font-family: "Microsoft Yahei";
-	 font-size: 20px !important;
-}
+
 p,div{
 	font-family: "Microsoft Yahei";
 }
-.page1,.page2,.page3,.page4,.page5,.page6,.page7,.page8,.page9,.page10,.page11,.page12{
+.page1,.page2,.page3,.page4,.page5,.page6,.page7,.page8,.page9,.page10,.page11,.page12,.page13{
 	text-align: center;
 	width: 70%;		 
 	margin: 0 auto;	
 	height: 100% !important;
 	display: block !important;
+	 
 }
-.page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p,.page8 p,.page9 p,.page10 p,.page11 p,.page12 p{
-	text-indent:40px;
+.page2 p,.page3 p,.page4 p,.page5 p,.page6 p,.page7 p,.page8 p,.page9 p,.page10 p,.page11 p,.page12 p,.page13 p{
+	text-indent:25px;
 	text-align: left;
 	line-height: 2;
 }
+.page2>h3,.page3>h3,.page4>h3,.page5>h3,.page6>h3,.page7>h3,.page8>h3,.page9>h3,.page10>h3,.page11>h3,.page12>h3{
+ 	 padding-top:75px; 	 
+}
+.page2>h4,.page3>h4,.page4>h4,.page5>h4,.page6>h4,.page7>h4,.page8>h4,.page9>h4,.page10>h4,.page11>h4,.page12>h4{
+ 	 padding-top:75px; 	 
+}
+.page8 p,.page9 p,.page10 p,.page11 p,.page12 p{
+	margin: 0 !important;
+}
+
 .table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th{
 	padding: 1px !important;
 }
 
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td{
+	    border: 1px solid #828282 !important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+	vertical-align: middle;
+}
 .headpage{
 	width: 80%;
-	border-bottom: 1px solid black;
-	margin: 20px auto;
+	border-bottom: 1px solid black;	
+	position: absolute;
+	left: 10%;
+	top: 35px;
 }
 .imghead{
 	width: 20px;
@@ -65,11 +91,25 @@ p,div{
 	background-size: 100% 100%;
 }
 /*page1*/
+.fullpage_page1{
+		background: url(../img/fengmian.jpg) no-repeat 0 0 !important;
+	background-size: 100% 100% !important;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
 .page1{
 	text-align: center;
 	height: 100%;
 	min-height: 100%;
 	position: relative;
+
+}
+
+.page1 .chd_id{
+	position: absolute;
+	right: -50px;
+	top: 0;
 }
 .page1 .title{
 		font-size: 33px;	
@@ -81,11 +121,17 @@ p,div{
 	text-align: center;
 	font-size: 10px;
 }
+.center_bottom{
+	text-align: center;
+	font-size: 7px;
+	margin-top: -3px;
+ 
+}
 .page1 .information{
 	 width:50%;
 	 text-align: center;
 	 text-align: -moz-left;	
-	 margin:30% 25% 0 25%;	 	
+	 margin:30% 23%;	 	
 }
 .page1 .information>div{
 	margin:10px 0;	
@@ -109,6 +155,7 @@ p,div{
 }
 .biginfo{
 	font-size: 20px;
+	margin-top: 50% !important;
 }
 .page1 .information span{
 
@@ -118,11 +165,12 @@ p,div{
 }
 .page1 .institution{
 	position: absolute;
-	bottom: 30px;
+	bottom: -10px;
 	width: 100%;
 	height: 90px;/*脚部的高度*/						 
 	clear:both;
 	line-height: 1;
+	text-align: center;
 }
  
  /*page2*/
@@ -131,7 +179,10 @@ p,div{
 	 
 	letter-spacing:1px;
 	height: 100% !important; 
-	margin-top: 50px;
+	margin-top: 0px;
+}
+.page2 h3{
+	 
 }
  .page2_wrap{
  }
@@ -142,20 +193,22 @@ p,div{
 		letter-spacing:1px;
 	height: 100%;
 }
-
+.page3 h3{
+	 
+}
 
 /*page4*/
 .page4{
 	display: none;
-		letter-spacing:1px;
-	 height: 100%;
+	letter-spacing:1px;
+	height: 100%;
 	 
 }
 .chart h4{
 	margin-bottom: 15px !important;
 }
 .page4 .analysis p:not(.firstp){
-	 
+	 text-indent: 0px !important;
 }
  
 .page4 .analysis p:nth-of-type(2){
@@ -170,17 +223,19 @@ p,div{
 		letter-spacing:1px;
 	height: 100%;
 }
-.page5 tr{
-	  
+.page5 thead tr{
+	  height:33px
+}
+.page5 h4{
+	 
 }
 .page5 p{
-	margin-bottom: 1px !important;
-	margin-top: 1px !important;
+	 
 }
 .page5 table th{	
 	text-align: center;
 	color:#fff !important;
-	background-color:#D32F2F !important;
+	background-color:#5aa0dc !important;
 }
 .table-striped tbody tr:nth-of-type(odd){
 	background-color: #f2dede !important;
@@ -189,23 +244,27 @@ p,div{
 /*page6*/
 .page6{
 	display: none;
-		letter-spacing:1px;
+	letter-spacing:1px;
 	height: 100%;
 }
 .excellent span,.good span,.Medium span,.base span,.develop span{
 	padding:0 10px;
 }
 .hidep div:first-child{
-	margin: 5px 0;
-	text-indent: 40px;
+	margin: 10px 0 5px 0;
+	text-indent: 25px;
 }
 .hidep{
 	display: none;
 	text-align: left;
+	line-height: 2;
 }
 .page6_analysis table{
 	 
 	
+}
+.page6 table{
+	text-align: center !important;
 }
 .page6_analysis table td{
 	width: 25% !important;
@@ -218,21 +277,24 @@ p,div{
 	
 		letter-spacing:1px;
 }
+.page7 h4{
+	 
+}
 .hbar_wrap{
-	height: 15px;
+	height: 10px;
 	position: relative;
 	width: 100%;
 }
 .hbar{
-	height: 15px;
-	background-color: #EC971F !important;
+	height: 10px;
+	background-color: #5aa0dc !important;
 	z-index: 10;
 	position: absolute;
 }
 .hbar_background{
 width:100%;
-height:15px;
-background-color: black !important;
+height:10px;
+background-color: #c8c8c8 !important;
 position: absolute;
 
 }
@@ -254,7 +316,7 @@ position: absolute;
 	padding: 5px !important;
 }
 #column_table thead th:nth-of-type(1){
-	width: 20%;
+	width: 25%;
 }
 #column_table thead th:nth-of-type(3){
 	width: 20%;
@@ -292,16 +354,36 @@ position: absolute;
 }
 /*page12*/
 .page12{
-	height: initial !important;
+	margin-top: 0px;
+ 
 	display: none;
 }
 .page12 h3{
-	 text-align: center;
+	 text-align: center !important;
 }
 .page12 h5{
-	text-align: left;
+	text-align: left !important;
 }
 .date1{
 	float: right;
 	text-align: right !important;
+}
+/*page13*/
+.page13{
+	
+}
+.page13full{
+	background: url(../img/beimian.jpg) no-repeat 0 0 !important;
+	background-size: 100% 100% !important;
+}
+.endimg{
+	position: absolute;
+	width: 130px;
+	top: 250px;
+	left:235px
+}
+.endinfo{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
 }
