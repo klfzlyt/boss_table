@@ -125,6 +125,10 @@
 					$('<div class="center headpage">&nbsp&nbsp国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+chdname+'(Q3C28D'+chdid+')</div>').addClass("header").appendTo($(".page"+i));
 				}
 				$('<div class="center headpage">&nbsp&nbsp国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+chdname+'(Q3C28D'+chdid+')</div>').addClass("header").appendTo($(".page12"));
-		
+				for(var i=2;i<=6;i++){
+					$('<div>'+(i-1)+'/6</div>').addClass("footer").appendTo($(".page"+i));
+				}
+				$('<div>6/6</div>').addClass("footer").appendTo($(".page12"));
+				
 				
 			});

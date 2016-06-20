@@ -391,3 +391,12 @@ position: absolute;
 	left: 10px;
 	font-size:10px !important;
 }
+.footer{
+	text-align: center;
+	font-size: 9px;
+	letter-spacing: 1.5;
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	left: 0;
+}
