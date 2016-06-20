@@ -83,6 +83,7 @@ p,div{
 	position: absolute;
 	left: 10%;
 	top: 35px;
+	text-align: left !important;
 }
 .imghead{
 	width: 20px;
@@ -109,7 +110,7 @@ p,div{
 .page1 .chd_id{
 	position: absolute;
 	right: -50px;
-	top: 10px;
+	top: 50px;
 }
 .page1 .title{
 		font-size: 33px;	
@@ -119,7 +120,8 @@ p,div{
 }
 .center{
 	text-align: center;
-	font-size: 10px;
+	font-size: 9px;
+	letter-spacing: 1.5;
 }
 .center_bottom{
 	text-align: center;
@@ -155,7 +157,7 @@ p,div{
 }
 .biginfo{
 	font-size: 20px;
-	margin-top: 45% !important;
+	margin-top: 40% !important;
 }
 .page1 .information span{
 
@@ -378,12 +380,14 @@ position: absolute;
 }
 .endimg{
 	position: absolute;
-	width: 130px;
-	top: 250px;
-	left:235px
+	width: 100px;
+	top: 270px;
+	left:250px
 }
 .endinfo{
+	line-height: 0.9 !important;
 	position: absolute;
-	bottom: 10px;
+	bottom: 20px;
 	left: 10px;
+	font-size:10px !important;
 }

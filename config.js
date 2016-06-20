@@ -86,7 +86,10 @@
 				
 				var url='http://www.21thkids.com/up/chaxunnew.php?CHD_ID=';
 				//console.log($(".childid").dataset.childid);
-				url+=$(".childid").data('childid');
+				var chdid=$(".childid").data("childid");
+				var chdname=$(".childname").data('childname');
+				url+=chdid;
+				
 				var strdata;
 				//
 				strdata=$.ajax({url:url,async:false}).responseText;
@@ -118,10 +121,10 @@
 				var report_number="6D4E3C2178"+Math.round(Math.random()*10000);
 				$(".report_number").text(report_number);
 	
-				for(var i=2;i<=11;i++){
-					$('<div class="center headpage">国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告</div>').addClass("header").appendTo($(".page"+i));
+				for(var i=2;i<=6;i++){
+					$('<div class="center headpage">&nbsp&nbsp国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+chdname+'(Q3C28D'+chdid+')</div>').addClass("header").appendTo($(".page"+i));
 				}
-
+				$('<div class="center headpage">&nbsp&nbsp国际儿童青少年素质测评中心&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp学生综合素质测评报告&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+chdname+'(Q3C28D'+chdid+')</div>').addClass("header").appendTo($(".page12"));
 		
 				
 			});
